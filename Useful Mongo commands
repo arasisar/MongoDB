@@ -1,0 +1,19 @@
+Heres a summary of useful commands you can run inside the mongo shell to get an idea of how your server is acting.
+These can be scripted so you can pull out some values and chart or monitor them if you want.
+
+db.currentOp() - shows you all currently running operations
+db.killOp(opid) - lets you kill long running queries
+db.serverStatus() - shows you stats for the entire server, very useful for monitoring
+db.stats() - shows you stats for the selected db
+db.collection.stats() - stats for the specified collection
+
+
+Monitoring commands
+There are some pretty cool utilities that come with Mongo for monitoring your instances.
+
+mongotop - shows how much time was spend reading or writing each collection over the last second
+mongostat - brilliant live debug tool, gives a view on all your connected MongoDB instances
+Monitoring frontends
+
+MMS - 10gen’s hosted mongo monitoring service. Good starting point.
+Kibana - Logstash frontend. Trend analysis for Mongo logs. Pretty useful for good visibility.
